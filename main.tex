@@ -1,0 +1,129 @@
+\documentclass{article}
+\include{preamble}
+
+\begin{document}
+
+
+
+\section{Chapter 1: Tools for Analysis}
+\begin{definition}
+    For a set of real numbers $S$ that is bounded above, there exist a number such that all
+    upper bounds of $S$ are greater than it. This number is the supremum of the set $S$.
+\end{definition}
+\begin{theorem}
+   (Archimedean Principle) 
+   
+   \begin{enumerate}
+       \item Given any number $\epsilon$, there exist a natural number $n$ such that $n>\epsilon$
+       \item $(\forall\epsilon\in \mathbb{R}) (\exists n\in \mathbb{N}) \frac{1}{n} < \epsilon$
+   \end{enumerate}
+\end{theorem}
+\begin{theorem}
+    The rationals are dense in $\mathbb{R}$
+\end{theorem}
+
+\newpage
+\section{Chapter 2: Convergent Sequences}
+\begin{definition}
+    Given a sequence of numbers ${a_n}$, we say that ${a_n}$ converges to the number $a$
+    if $\forall \epsilon>0$, there exists $N\in \mathbb{N}$ such that $\forall n \ge N$
+    \[|a_n - a| < \epsilon\]
+\end{definition}
+Equivalently,
+\[ \lim_{n \to \infty} a_n = a \]
+
+\begin{theorem}
+    (Properties of Limits) Suppose ${a_n}$ and ${b_n}$ are sequences that converge. Then,
+    \begin{enumerate}
+        \item (Linearity) $\alpha,\beta \in \mathbb{R}$
+        \[ \slim \alpha a_n + \beta b_n = \alpha\slim a_n + \beta\slim b_n\]
+        \item (Product Rule)
+        \[ \slim a_nb_n = \slim a_n \cdot \slim b_n \]
+        \item (Quotient Rule) Suppose also that $b_n \neq 0$ for all $n\in \mathbb{N}$ and
+        $\slim b_n \neq 0$. Then,
+        \[ \slim \frac{a_n}{b_n} = \frac{\slim a_n}{\slim b_n}\]
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}
+    A sequence ${a_n}$ is bounded if there exists nonnegative number $M$ such that
+    \[ |a_n| \leq M \]
+    for all $n$.
+\end{definition}
+
+\begin{theorem}
+    Every convergent sequence is bounded
+\end{theorem}
+
+\begin{theorem}
+    A set $S$ is dense in $\R\Longleftrightarrow $ every number $x$ is the limit of a sequence of $S$.
+\end{theorem}
+
+\begin{theorem}
+    (Comparison Lemma) Suppose $\slim b_n = b$. A sequence $\slim a_n$ converges to a number $a$
+    if for some $C\geq 0$ and $N\in \mathbb{N}$,
+    \[ |a_n -a| \leq C|b_n -b| \] for $n\geq N$
+\end{theorem}
+
+\begin{definition}
+    A subset $S$ of $\R$ is closed if ${a_n}$ is a sequence in $S$ that converges in $S$.
+\end{definition}
+
+\begin{theorem}
+    Every interval $[a,b]$ over $\R$ is closed.
+\end{theorem}
+
+\begin{definition}
+    A sequence is said to be monotone if
+    \[ a_n \geq a_{n-1} \]
+    (increasing) or
+    \[ a_n \leq a_{n-1} \]
+    (decreasing) for all $n$.
+\end{definition}
+
+\begin{theorem}
+    A monotone sequence converges $\iff$ it is bounded
+\end{theorem}
+
+\begin{definition}
+    Consider a sequence ${a_n}$. A subsequence is a sequence $b_k$ such that for some
+    sequence of strictly increasing natural numbers $n_1 < n_2 < \hdots $,
+    \[ b_k = a_{n_k} \]
+\end{definition}
+
+\begin{theorem}
+    If ${a_n}$ converges to $a$, then every ${a_{n_k}}$ converges to $a$    
+\end{theorem}
+
+\begin{theorem}
+    (Sequential Compactness)
+    Every sequence in interval $[a,b]$ has a subsequence that converges to a number
+    in $[a,b]$.
+\end{theorem}
+
+\newpage
+\section{Chapter 3: Continuous Functions}
+
+\begin{definition}
+    A function $f:D\rightarrow \R$ is said to be continuous at $x_0\in D$ if whenever
+    $\{x_n\}$ is a sequence that converges to $x_0$, the sequence $\{f(x_n)\}$ converges
+    to $f(x_0)$.
+
+    A function is continuous if it is continuous for all $x_0\in D$.
+\end{definition}
+
+\begin{theorem} (Properties of continuity)
+    \begin{enumerate}
+        \item Products, quotients, and linear combinations of functions $f$ and $g$ are continuous.
+        \item Compositions of continuous functions (provided that the domain and images are 
+        consistent) are continuous
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}
+    (Epsilon-Delta Convergence)
+\end{definition}
+
+
+
+\end{document}
