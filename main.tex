@@ -22,7 +22,6 @@
     The rationals are dense in $\mathbb{R}$
 \end{theorem}
 
-\newpage
 \section{Chapter 2: Convergent Sequences}
 \begin{definition}
     Given a sequence of numbers ${a_n}$, we say that ${a_n}$ converges to the number $a$
@@ -101,7 +100,6 @@ Equivalently,
     in $[a,b]$.
 \end{theorem}
 
-\newpage
 \section{Chapter 3: Continuous Functions}
 
 \begin{definition}
@@ -115,13 +113,86 @@ Equivalently,
 \begin{theorem} (Properties of continuity)
     \begin{enumerate}
         \item Products, quotients, and linear combinations of functions $f$ and $g$ are continuous.
+        \begin{enumerate}
+            \item $f+g:D\rightarrow \mathbb{R}$ is continuous
+            \item $f\cdot g:D\rightarrow \mathbb{R}$ is continuous
+            \item $f/g:D\rightarrow \mathbb{R}$ is continuous given that g is
+            not 0 anywhere in $D$
+        \end{enumerate}
         \item Compositions of continuous functions (provided that the domain and images are 
         consistent) are continuous
+        \[f\circ g (x)\] is continuous
     \end{enumerate}
 \end{theorem}
 
+\begin{proof}
+    Properties of convergent sequences.
+\end{proof}
+
+\begin{theorem}
+    Let $f:[a,b]\rightarrow \mathbb{R}$ be a continuous function. There exist
+    a maximum and a minimum of the function.
+\end{theorem}
+
+\begin{proof}
+    \hfill
+    \begin{enumerate}
+        \item $f$ is bounded above -- Suppose not bounded. Consider
+        a sequence such that $f(x_n) > n$. $x_{n_k}$ converges but
+        $f$ continuous.
+        \item $\sup f(D)$ is a functional value -- Consider a sequence
+        such that $f(x_n) > c-\frac{1}{n}$. $x_{n_k}$ converges to 
+        $x_0$ and $f$ continuous so $f(x_0) = c$.
+    \end{enumerate}
+\end{proof}
+
+\begin{theorem}
+    Let $f[a,b]\rightarrow \mathbb{R}$ be a continuous function. For any number
+    $c\in(a,b)$, there exist a point $x_0\in [a,b]$ such that
+    \[f(x_0) = c\]
+\end{theorem}
+
+\begin{proof}
+    Bisection method: define $m_n = \frac{a_n+b_n}{2}$. Consider first
+    $f(a) < f(b)$. If $c\geq f(m_n)$, set $a_{n+1} = m_n$ (alternatively,
+    same with $b_{n+1}$). Now, $a_n\leq a_{n+1} < b_{n+1} \leq b_n$.
+    Also, $b_n-a_n = \frac{b-a}{2^{n-1}}$ so it converges to 0. By
+    Nested Interval, $\{a_n\}$ and $\{b_n\}$ converge to a point $x_0$.
+    $f(x_0) \leq c$ since $f(a_n) \leq c$ and $f(x_0) \geq c$ since 
+    $f(b_n) \geq c$, so $f(x_0) = c$.
+\end{proof}
+
+\begin{definition}
+    An interval $I$ over $\mathbb{R}$ is a set of numbers such that any
+    $x<y$ where $x,y\in I$ defines an interval $[x,y]$ in $I$.
+\end{definition}
+
+\begin{theorem}
+    Let $f:I\rightarrow \mathbb{R}$ function where $I$ is an interval.
+    Then, the image of $f$ is also an interval.
+\end{theorem}
+
+\begin{proof}
+    Definition of interval and Intermediate Value Theorem.
+\end{proof}
+
+\begin{theorem}
+    Let $f:I\rightarrow \mathbb{R}$ be a function where $I$ is
+    an interval. Then, $f$ is continuos if its image $f(I)$ is an
+    interval.
+\end{theorem}
+
+\begin{definition}
+    $f:D\rightarrow R$ is said to converge uniformly in $D$ if whenever
+    $\{u_n\}$ and $\{v_n\}$ are two sequences in $D$ such that
+    \[\lim_{n\rightarrow \infty} |u_n-v_n| = 0\]
+    then
+    \[\lim_{n\rightarrow \infty} |f(u_n) - f(v_n)| =0\]
+\end{definition}
+
 \begin{definition}
     (Epsilon-Delta Convergence)
+
 \end{definition}
 
 
