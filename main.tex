@@ -191,10 +191,134 @@ Equivalently,
 \end{definition}
 
 \begin{definition}
-    (Epsilon-Delta Convergence)
-
+    (Epsilon-Delta Criterion)
+    A function is said to satisfy the $\epsilon-\delta$ criterion at a point $x_0$, if
+    $\forall \epsilon>0$ there exists $\delta>0$ such that, 
+    \[ |f(x) - f(x_0)| < \epsilon \quad \textrm{if} \quad |x-x_0|<\delta\]
+    
+    ($\epsilon-\delta$ Over a Domain)
+    A function is said to satisfy the $\epsilon-\delta$ over a domain if $\forall \epsilon>0$
+    there exists $\delta>0$ such that for all $x\in D$,
+    \[ |f(u) - f(v)| < \epsilon \quad \textrm{if} \quad |u-v|<\delta\]
 \end{definition}
 
+\begin{theorem}
+    \hfill
+    \begin{enumerate}
+        \item A function satisfies the $\epsilon-\delta$ criterion at a point $x_0$
+        $\Longleftrightarrow$ it is continuous at $x_0$.
+        \item A function satisfies the $\epsilon-\delta$ criterion over a domain 
+        $\Longleftrightarrow$ it is uniformly continuous over the domain.
+    \end{enumerate}
+\end{theorem}
+\section{Chapter 9: Sequences and Series of Functions}
 
+\begin{definition}
+    A sequence is said to be Cauchy if for all $\epsilon>0$ $\exists N\in \mathbb{N}$
+    such that 
+    \[ |a_n - a_m| < \epsilon \] for all $n,m \geq N$
+\end{definition}
+
+\begin{theorem}
+    A sequence converges $\Longleftrightarrow$ it is Cauchy.
+\end{theorem}
+
+\begin{proof}
+    \hfill
+    \begin{enumerate}
+        \item ($\Rightarrow$) -- 
+        \[ |a_n - a_m| = |a_n -a +a -a_m| \leq |a_n -a| + |a_m - a| \]
+        \item ($\Leftarrow$) --
+        A Cauchy sequence is bounded since $|a_n| \leq |a_n| + |a_n-a_N| = |a_n| + 1$
+        where $N$ is chosen with Cauchy assumption. By sequential compactness, $a_{n_k}$ converges to
+        a number a. Then there exist $N'=\max\{N_{Cauchy},N_{sub}\}$ such that for
+        $n\geq N'$,
+        \[ |a_n -a | \leq |a_n-a_{n_k}| + |a - a_{n_k}| \]
+    \end{enumerate}
+\end{proof}
+
+\def\series{\sum_{i=1}^\infty a_i}
+
+\begin{theorem}
+    (Necessary condition for Series Convergence)
+    Suppose $\series$ converges. Then, $\slim a_n = 0$.
+\end{theorem}
+
+\begin{theorem}
+    Suppose $\{a_n\}$ is nonnegative. $\series$ converges $\Longleftrightarrow$
+    $S_n$ is bounded
+\end{theorem}
+
+\begin{theorem}
+    (Comparison Test)
+    Suppose $\{a_n\}$ and $\{b_n\}$ are two sequences. And $a_n\leq b_n$. Then,
+    \begin{enumerate}
+        \item $\series$ converges if $\sum_{i=1}^\infty b_i$ converges.
+        (Example: $\frac{1}{k2^k} \leq \frac{1}{2^k}$)
+        \item $\series$ diverges only if $\sum_{i=1}^\infty b_i$ diverges.
+        (Example: $\frac{1}{\sqrt{k}}\geq \frac{1}{k}$)
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+    (Integral Test)
+    Suppose a sequence $\left\{ a_k \right\}$ and a function $f$ that has the property
+    \[ f(k) = a_k \]  and is continuous and montonically decreasing.
+    for all $k$. Then, $\left\{ a_k \right\}$ converges $\Longleftrightarrow$
+    the sequence $\{\int_1^n f(x)\, dx\}$ is bounded. 
+\end{theorem}
+
+\begin{theorem}
+    ($p$-Test)
+    For a positive number p, the series
+    \[ \sum_{i=1}^\infty \frac{1}{k^p} \]
+    converges if and only if $p>1$
+\end{theorem}
+
+\begin{theorem}
+    (Alternating Series)
+    Suppose $\left\{ a_k \right\}$ is a nonnegative sequence, monotonically
+    decreasing, and converges to 0. The series
+    \[ \sum_{i=1}^\infty (-1)^{k+1}a_k \]
+    converges.
+\end{theorem}
+
+\begin{theorem}
+    If $\sum_{i=1}^\infty |a_i|$ converges, then $\series$ converges.
+\end{theorem}
+
+\begin{theorem}
+    Given the series $\series$. Suppose there exists $N\in \mathbb{N}$ such that 
+    for all $n\geq N$,
+    \[ |a_{n+1}|\leq r|a_n| \quad \textrm{for} \quad 0\leq r < 1 \]
+    Then, $\series$ converges absolutely.
+\end{theorem}
+
+\begin{proof}
+    For $n\geq N$,
+    \[ |a_1| + |a_2| + \hdots + |a_{N+k}| \leq |a_1| + |a_2| + \hdots + |a_N|\frac{1-r^{k+1}}{1-r} \]
+    so the partial sum is bounded for every index $n$.
+\end{proof}
+
+\begin{theorem}
+    (Ratio Test)
+    Suppose for the sequence $\series$,
+    \[ \slim \frac{|a_{n+1}|}{|a_n|} = l\]
+    Then, $\series$ converges absolutely if $l < 1$ and diverges if $l > 1$.
+\end{theorem}
+
+\subsection{Sequence of Functions}
+
+\begin{theorem}
+    (Differentiability of Limit Function) \\
+    Suppose $\{f_n:I\rightarrow \R\}$ is a sequence of continuously differentiable
+    functions and $\{f_n'\}$ the derived sequence. If
+    \begin{enumerate}
+        \item $\{f_n:I\rightarrow \R\}$ converges pointwise to $f$
+        \item $\{f_n'\}$ converges uniformly to a function $g$
+    \end{enumerate}
+    Then,
+    \[ f'(x) = g(x) \quad \forall x\in I\]
+\end{theorem}
 
 \end{document}
