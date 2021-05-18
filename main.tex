@@ -211,6 +211,20 @@ Equivalently,
         $\Longleftrightarrow$ it is uniformly continuous over the domain.
     \end{enumerate}
 \end{theorem}
+
+\section{Chapter 8: Taylor Polynomials}
+
+\begin{definition}
+    Suppose $f:I\rightarrow \R$ has n derivatives. The $n$th Taylor Polynomial around 
+    the point $x_0\in I$ is defined by
+    \[ p_n(x) = \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k \]
+\end{definition}
+
+\begin{remark}
+   A Taylor Series Expansion of a function $f:I\rightarrow \R$ holds at $x$ if and only if 
+   \[ \slim [f(x) - p_n(x)] = 0 \]
+\end{remark}
+
 \section{Chapter 9: Sequences and Series of Functions}
 
 \begin{definition}
@@ -308,6 +322,15 @@ Equivalently,
 \end{theorem}
 
 \subsection{Sequence of Functions}
+
+\begin{theorem}
+    (Integrability of Limit Function) \\
+    Suppose $\{f_n:[a,b]\rightarrow \R\}$ is a sequence of integrable functions.
+    If $\left\{ f_n \right\}$ converges uniformly to $f$, $f$ is also
+    integrable and
+    \[ \slim \int_a^b f_n(x)\, dx = \int_a^b f(x)\, dx\]
+\end{theorem}
+
 
 \begin{theorem}
     (Differentiability of Limit Function) \\

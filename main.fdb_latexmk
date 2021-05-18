@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1621133722 "c:/Users/socce/OneDrive/Documents/Classes/MATH/MATH410/overview/main.tex" "main.pdf" "main" 1621133723
+["pdflatex"] 1621313000 "c:/Users/socce/OneDrive/Documents/Classes/MATH/MATH410/overview/main.tex" "main.pdf" "main" 1621313007
   "C:/Users/socce/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1620952847 10019650 04c4a7354bf11de9da380dd07c24ea9f ""
   "C:/Users/socce/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1621112137 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/socce/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
@@ -46,12 +46,12 @@
   "C:/Users/socce/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty" 1582875266 5050 8933a39ad74377accd18991c5eb90c58 ""
   "C:/Users/socce/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1582875266 8446 9874cccac5fee462272c582807dbbf56 ""
   "C:/Users/socce/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdfmode.def" 1593424850 24606 ecae4e851ce9ce4554d156050e5057f9 ""
-  "c:/Users/socce/OneDrive/Documents/Classes/MATH/MATH410/overview/main.tex" 1621133721 11232 2bcf1fc2bc1a1b2180b02afd464c79f8 ""
-  "main.aux" 1621133722 679 3f7aaa91e79b65df90f2f9fbd470b861 "pdflatex"
-  "main.tex" 1621133721 11232 2bcf1fc2bc1a1b2180b02afd464c79f8 ""
+  "c:/Users/socce/OneDrive/Documents/Classes/MATH/MATH410/overview/main.tex" 1621313000 11981 a60e4ebfca090d71c4200d7370c2d4bd ""
+  "main.aux" 1621313001 794 6a55c90bf755fa18fc8b2ddcd63dbf0f "pdflatex"
+  "main.tex" 1621313000 11981 a60e4ebfca090d71c4200d7370c2d4bd ""
   "preamble.tex" 1621111920 338 c01c94a9d3839bb2938f743719a445f8 ""
   (generated)
-  "preamble.aux"
   "main.pdf"
-  "main.log"
+  "preamble.aux"
   "main.aux"
+  "main.log"
